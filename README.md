@@ -1,61 +1,95 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🛍️ E-commerce Profesional con Laravel 12, Tailwind CSS y Stripe
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Plataforma de tienda en línea desarrollada con Laravel 12, Tailwind CSS y Stripe, lista para producción. Incluye gestión de productos, categorías, proveedores, inventario, pedidos, carrito, clientes, reseñas, wishlist y panel administrativo completo.
 
-## About Laravel
+## 🚀 Tecnologías Utilizadas
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- Laravel 12
+- Tailwind CSS
+- Stripe (pagos en línea)
+- MySQL
+- Livewire (opcional)
+- FontAwesome
+- Laravel Excel (para exportación)
+- Blade Components
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 📦 Funcionalidades
 
-## Learning Laravel
+### 🛍️ Tienda pública
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Vista de productos por categoría
+- Página de producto con detalles
+- Carrito de compras
+- Registro / Login de clientes
+- Checkout seguro con Stripe
+- Historial de pedidos
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 🧾 Gestión de pedidos
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Panel de pedidos del cliente
+- Panel de pedidos del administrador
+- Cambio de estado (Pendiente, Procesando, Enviado, Cancelado)
+- PDF imprimible del pedido
+- Exportación de pedidos a Excel
 
-## Laravel Sponsors
+### 👤 Gestión de usuarios
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- Registro/Login
+- Wishlist (favoritos)
+- Reseñas de productos
 
-### Premium Partners
+### ⚙️ Panel de administración
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- Dashboard con estadísticas
+- CRUD de productos
+- CRUD de categorías
+- CRUD de proveedores
+- CRUD de inventario
+- Gestión de pedidos
+- Configuración de parámetros de la tienda
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 📸 Capturas (opcional)
 
-## Code of Conduct
+_Añadir aquí screenshots de tienda, carrito, dashboard, etc._
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 🧑‍💻 Instalación
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+git clone https://github.com/tuusuario/mi-ecommerce-laravel.git
+cd mi-ecommerce-laravel
+composer install
+npm install && npm run dev
+cp .env.example .env
+php artisan key:generate
+php artisan migrate --seed
+Configura tu .env con tu conexión a base de datos y las credenciales de Stripe:
 
-## License
+env
+Copiar
+Editar
+STRIPE_KEY=pk_test_xxxxxxxxxxxxx
+STRIPE_SECRET=sk_test_xxxxxxxxxxxx
+🧪 Comandos útiles
+bash
+Copiar
+Editar
+php artisan migrate:fresh --seed
+php artisan serve
+npm run dev
+php artisan storage:link
+📤 Despliegue (Deploy)
+Soportado en Laravel Forge, Heroku, Vercel (con Laravel API), etc.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Asegúrate de tener configurado APP_URL, APP_ENV=production, APP_DEBUG=false
+
+📄 Licencia
+MIT - Libre para uso personal y comercial.
+
+🙌 Agradecimientos
+Inspirado por proyectos reales de e-commerce y mejores prácticas de Laravel.
